@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AttendanceTracker</string>
+    <string name="already_registered">Already Registered ?</string>
 </resources>

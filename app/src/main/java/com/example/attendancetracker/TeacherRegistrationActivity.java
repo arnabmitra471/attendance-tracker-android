@@ -1,5 +1,6 @@
 package com.example.attendancetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class TeacherRegistrationActivity extends AppCompatActivity {
 
     EditText tnameTxt,temailTxt,tPassTxt,tConfPassTxt;
-    Button registerBtn;
+    Button registerBtn,regLoginBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,7 @@ public class TeacherRegistrationActivity extends AppCompatActivity {
         tPassTxt = findViewById(R.id.tPassTxt);
         tConfPassTxt = findViewById(R.id.tConfPassTxt);
         registerBtn = findViewById(R.id.registerBtn);
+        regLoginBtn = findViewById(R.id.reg_loginBtn);
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +67,14 @@ public class TeacherRegistrationActivity extends AppCompatActivity {
                         Toast.makeText(TeacherRegistrationActivity.this,"Unable to register",Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        regLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent teacherLoginIntent = new Intent(TeacherRegistrationActivity.this,MainActivity.class);
+                startActivity(teacherLoginIntent);
             }
         });
     }
