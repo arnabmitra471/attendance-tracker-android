@@ -66,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,"Please check your credentials",Toast.LENGTH_SHORT).show();
                     }
                 }
+                else
+                {
+                    Toast.makeText(MainActivity.this,R.string.unregistered_teacher,Toast.LENGTH_LONG).show();
+                }
 
             }
         });

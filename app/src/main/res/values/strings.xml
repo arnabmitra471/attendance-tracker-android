@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AttendanceTracker</string>
     <string name="already_registered">Already Registered ?</string>
+    <string name="unregistered_teacher">"You have not registered in our app. Please register first"</string>
 </resources>
