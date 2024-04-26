@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     if(teacherData.gettPass().equals(password))
                     {
                         Toast.makeText(MainActivity.this,"Logged in Successfully",Toast.LENGTH_SHORT).show();
+                        Intent dayListIntent = new Intent(MainActivity.this,AttendanceDayListActivity.class);
+                        startActivity(dayListIntent);
                     }
                     else
                     {
