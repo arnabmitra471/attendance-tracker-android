@@ -1,6 +1,9 @@
 package com.example.attendancetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -36,6 +39,16 @@ public class AttendanceDayListActivity extends AppCompatActivity {
 
         ArrayAdapter<String> dayListAdapter = new ArrayAdapter<>(AttendanceDayListActivity.this, com.google.android.material.R.layout.support_simple_spinner_dropdown_item,days);
         att_day_list.setAdapter(dayListAdapter);
+
+        att_day_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent attendanceIntent = new Intent(AttendanceDayListActivity.this,AttendanceActivity.class);
+                String day = days.get(position);
+                attendanceIntent.putExtra("Day",day);
+                startActivity(attendanceIntent);
+            }
+        });
 
     }
 }
