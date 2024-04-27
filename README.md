@@ -1,4 +1,6 @@
-# This is an attendance tracker android project specifically meant for teachers to track their student's attendance To Run this project you will need :
+# This is an attendance tracker android project specifically meant for teachers to track their student's attendance.
+
+ To Run this project you will need :
 
 - Android Studio
 
